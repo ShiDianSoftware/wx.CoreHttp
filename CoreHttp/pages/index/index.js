@@ -1,4 +1,4 @@
-var CoreHttp = require('../CoreHttp/CoreHttp.js');
+var CoreHttp = require('../FrameWorks/CoreHttp/CoreHttp.js');
 
 
 Page({
@@ -12,7 +12,7 @@ Page({
     
     let url = "http://maps.google.cn/maps/api/geocode/json"
     let params = {"address":"chengdu"}
-    CoreHttp.post(url, params,function(o){
+    CoreHttp.get(url, params,function(o){
 
       console.log("请求成功：" + JSON.stringify(o))
     },function(e){
