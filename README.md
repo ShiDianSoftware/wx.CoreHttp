@@ -11,16 +11,17 @@
 
 #### 2.快速使用
 
+
         let url = "http://maps.google.cn/maps/api/geocode/json"
 
         let params = {"address":"chengdu"}
-        
-        // post也可以同样使用使用，get/post
-        CoreHttp.get(url, params,function(o){ //请求成功回调
+
+        // post也可以同样使用使用，get/post
+        CoreHttp.get(url, params,function(o){ //请求成功回调
 
           console.log("请求成功：" + JSON.stringify(o))
 
-        },function(e){ //请求失败回调
+        },function(e){ //请求失败回调
 
           console.log("请求失败：" + JSON.stringify(e))
 
