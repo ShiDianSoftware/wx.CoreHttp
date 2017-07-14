@@ -15,7 +15,7 @@
     
     let params = {"address":"chengdu"}
     
-    CoreHttp.get(url, params,function(o){// post也可以同样使用使用
+    CoreHttp.get(url, params,function(o){ // post也可以同样使用使用
 
       console.log("请求成功：" + JSON.stringify(o))
       
