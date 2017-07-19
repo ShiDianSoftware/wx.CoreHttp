@@ -101,12 +101,13 @@ CoreList 一键列表 https://github.com/ShiDianSoftware/wx.CoreList
                  * */
                 AppHttp.post(this, url, params, 1, function (o) {
 
-                console.log("请求成功：")
-                console.log(o)
+                        console.log("请求成功：")
+                        console.log(o)
+                        
                 }, function (e) {
 
-                console.log("请求失败：")
-                console.log(e)
+                        console.log("请求失败：")
+                        console.log(e)
                 });
 
 
