@@ -4,7 +4,7 @@
 ============
 CoreList 一键列表 https://github.com/ShiDianSoftware/wx.CoreList 
 
-基本使用 
+一、基集成CoreHttp
 =============
 
 #### 1.框架集成
@@ -64,7 +64,57 @@ CoreList 一键列表 https://github.com/ShiDianSoftware/wx.CoreList
         }
 
 
-#### 4. 作者Charlin
+
+二、集成AppHttp
+=============
+
+####  1.将CoreHttp，AppHttp，CoreSVP，CoreIV四个独立的框架的文件夹拖拽到FrameWorks文件夹中。
+
+#### 2.集成js文件，在当前控制器的js文件中:
+
+                let CoreHttp = require('../FrameWorks/CoreHttp/CoreHttp.js')
+                let AppHttp = require('../FrameWorks/AppHttp/AppHttp.js')
+
+#### 3.集成wxml文件，在当前控制器的wxml文件中：
+
+                <include src="/pages/FrameWorks/CoreSVP/CoreSVP.wxml" />
+                <import src="/pages/FrameWorks/CoreIV/CoreIV.wxml" />
+                <template is="CoreIV" data="{{...CoreIVData}}"></template>
+
+#### 4.集成wxss文件，在app.wxss文件中：
+
+                @import "/pages/FrameWorks/CoreSVP/CoreSVP.wxss";
+                @import "/pages/FrameWorks/CoreIV/CoreIV.wxss";
+
+
+#### 5.快速使用：
+
+                //此处post可以直接改为get使用，
+
+                /* 
+                 * requestType请求指示类型
+                 * 
+                 * 0: None
+                 * 1: SVP
+                 * 2: StatusView
+                 * 
+                 * */
+                AppHttp.post(this, url, params, 1, function (o) {
+
+                console.log("请求成功：")
+                console.log(o)
+                }, function (e) {
+
+                console.log("请求失败：")
+                console.log(e)
+                });
+
+
+
+
+
+
+#### 作者Charlin
 ##### Hi，我是Charlin Feng，来自成都，目前就职于成都时点软件开发有限公司。我是一名做了3年前后端开发LAMP的，然后从12年开始又做了5年iOS开发的工程师，
 
 ##### 这是我的Github： https://github.com/CharlinFeng 目录开源了100多个iOS框架（少量Android框架），在国内有上千名iOS框架使用者。
