@@ -1,4 +1,4 @@
-var CoreHttp = require('../FrameWorks/CoreHttp/CoreHttp.js')
+let CoreHttp = require('../FrameWorks/CoreHttp/CoreHttp.js')
 let AppHttp = require('../FrameWorks/AppHttp/AppHttp.js')
 
 Page({
