@@ -1,2 +1,9 @@
 <!--index.wxml-->
+<include src="/pages/FrameWorks/CoreSVP/CoreSVP.wxml" />
+<import src="/pages/FrameWorks/CoreIV/CoreIV.wxml" />
+<template is="CoreIV" data="{{...CoreIVData}}"></template>
+
+<button bindtap="NoneAction">NoneAction</button>
+<button bindtap="SVPAction">SVPAction</button>
+<button bindtap="IVAction">IVAction</button>
 

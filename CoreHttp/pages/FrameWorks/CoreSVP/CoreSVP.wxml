@@ -1,0 +1,2 @@
+<import src="/pages/FrameWorks/CoreSVP/src/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>

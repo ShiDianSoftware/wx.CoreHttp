@@ -1,0 +1,7 @@
+<template name="CoreIV">
+  <view class="CoreIVContentView {{top ? 'CoreIVTop' : 'CoreIVBottom'}}" animation="{{CoreIVAnim}}" data-index="{{index}}" bindtap="CoreIVClickAction">
+    <image class="CoreIVImage {{CoreIVRotation ? 'CoreIVRotation' : ''}}" mode="aspectFit" src="{{img}}" ></image>
+    <label class="CoreIVMainLabel">{{title}}</label>
+    <label class="CoreIVDescLabel">{{desc}}</label>
+  </view>
+</template>
