@@ -72,19 +72,14 @@ CoreList 一键列表 https://github.com/ShiDianSoftware/wx.CoreList
 
 #### 2.集成js文件，在当前控制器的js文件中:
 
-                let CoreHttp = require('../FrameWorks/CoreHttp/CoreHttp.js')
                 let AppHttp = require('../FrameWorks/AppHttp/AppHttp.js')
 
 #### 3.集成wxml文件，在当前控制器的wxml文件中：
 
-                <include src="/pages/FrameWorks/CoreSVP/CoreSVP.wxml" />
-                <import src="/pages/FrameWorks/CoreIV/CoreIV.wxml" />
-                <template is="CoreIV" data="{{...CoreIVData}}"></template>
+
 
 #### 4.集成wxss文件，在app.wxss文件中：
 
-                @import "/pages/FrameWorks/CoreSVP/CoreSVP.wxss";
-                @import "/pages/FrameWorks/CoreIV/CoreIV.wxss";
 
 
 #### 5.快速使用：
@@ -99,7 +94,7 @@ CoreList 一键列表 https://github.com/ShiDianSoftware/wx.CoreList
                  * 2: StatusView
                  * 
                  * */
-                AppHttp.post(this, url, params, 1, function (o) {
+                AppHttp.post(url, params, 1, function (o) {
 
                         console.log("请求成功：")
                         console.log(o)
